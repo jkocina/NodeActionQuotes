@@ -11,11 +11,15 @@ this section is to create static directories
 */
 
 app.use(express.static('public'));
-app.use(express.static('src/views'));
+// remove thanks to templating app.use(express.static('src/views'));
+
+app.set('views', './src/views');
+app.set('view engine', 'ejs');
 
 //handling the root dir
 app.get('/', function(req, res){
-    res.send('Bench Press');
+    //res.send('Bench Press');
+    res.render('index', {list: ['first val','second val','third val']});
 });
 
 app.get('/routing', function(req, res){
