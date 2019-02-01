@@ -8,14 +8,10 @@ const plumber = require("gulp-plumber");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const pkg = require('./package.json');
-
 const jshint = require('gulp-jshint');
-const stylish = require('jshint-stylish-summary')
-
 const inject = require('gulp-inject');
 const uglify = require('gulp-uglify');
 const nodemon = require('gulp-nodemon');
-
 
 // Set the banner content
 const banner = ['/*!\n',
@@ -117,7 +113,6 @@ gulp.task('index' , function(){
     ignorePath: '/public'
   };
   
-  //this includes a tag to inject at a custom location
   var customOptions = {
       ignorePath: '/public',
       starttag: '<!-- inject:custom:{{ext}} -->'
@@ -137,25 +132,24 @@ gulp.task('index' , function(){
   This function will check the style of the js files using jshint
 */
 
-
-var jsFiles =['./public/js/**/*.js'];
+var jsFiles =['public/js/*.js'];
 
 gulp.task('style', function(){
   
+  console.log(gulp.src(jsFiles).pipe(jshint()));
+  
   return gulp.src(jsFiles)
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+    .pipe(jshint());
 });
 
-gulp.task('serve', gulp.series('style','index', function() {
-  
+gulp.task('serve',['style','inject'], function(){
   var options={
-    script: 'app.js',
+    script: "app.js",
     delayTime: 1,
     watch: jsFiles
-  };  
+  }
   return nodemon(options)
     .on('restart', function(ev){
       console.log('Restarting Server...');
-    });
-}));
+    })
+})

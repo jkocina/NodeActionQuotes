@@ -4,11 +4,12 @@ var app = express();
 var port = process.env.PORT; //this is a cloud 9 environment variable to find the port hosted on
 
 /*
-a request will search this first for a resource. If its not found it will 
+a server request will search this first for a resource. If its not found it will 
 continue on with the rest of the requests 
 
 this section is to create static directories
 */
+
 app.use(express.static('public'));
 app.use(express.static('src/views'));
 
