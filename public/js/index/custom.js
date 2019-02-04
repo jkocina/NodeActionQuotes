@@ -4,6 +4,7 @@
     $(function () {
     
       $('.btn-cta').click(function () {
+        console.log("Pop Up clicked")
         $('.overlay').addClass('is-open');
         return false;
       });

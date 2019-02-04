@@ -21,6 +21,7 @@
     "express": "4.16.4",
     "ionicons": "^4.5.5",
     "jquery": "1.9.1 - 3",
+    "jquery-modal": "^0.9.1",
     "popper.js": "1.14.6",
     "socket.io": "2.2.0"
   },

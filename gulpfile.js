@@ -50,6 +50,12 @@ gulp.task('vendor', function(cb) {
     ])
     .pipe(gulp.dest('./public/vendor/ionicons'))
     
+    //jquery modal 
+    gulp.src([
+      './node_modules/jquery-modal/jquery*'
+    ])
+    .pipe(gulp.dest('./public/vendor/jquery-modal'))
+  
   cb();
 
 });
@@ -111,31 +117,38 @@ gulp.task("dev", gulp.parallel(watchFiles, browserSync));
 
 
 gulp.task('index' , function(){
-//This is whats being injected into 
+  //This is whats being injected into 
   var target = gulp.src('./src/views/index.ejs');
   
-//These are the sources to inject from. For this command, root is the directory the gulp file is in.
+  //These are the sources to inject from. For this command, root is the directory the gulp file is in.
   var sources = gulp.src(['./public/vendor/**/*.js', './public/**/*.css']);
   var customSources = gulp.src(['./public/js/index/*.js']);
+  var modalSources = gulp.src(['./public/vendor/jquery-modal/*']);
   
-//these are options for inject
+  //these are options for inject
   var coreOptions = {
     ignorePath: '/public'
   };
   
   //this includes a tag to inject at a custom location
   var customOptions = {
-      ignorePath: '/public',
-      starttag: '<!-- inject:custom:{{ext}} -->'
-      
+    ignorePath: '/public',
+    starttag: '<!-- inject:custom:{{ext}} -->'
   }
   
-/*
-  Piping into the target from inject sources. The inject method must have 
-  the programming to inject at the target placeholders
-*/
+  //Modal Options
+  var modalOptions = {
+    ignorePath: '/public',
+    starttag: '<!-- inject:modal:{{ext}} -->'
+  }
+  
+  /*
+    Piping into the target from inject sources. The inject method must have 
+    the programming to inject at the target placeholders
+  */
   return target.pipe(inject(sources, coreOptions))
     .pipe(inject(customSources, customOptions))
+    .pipe(inject(modalSources, modalOptions))
     .pipe(gulp.dest('./src/views'));
 });
 
@@ -143,9 +156,9 @@ gulp.task('index' , function(){
   This function will check the style of the js files using jshint
 */
 
-
 var jsFiles =['./public/js/**/*.js'];
 
+// This method will check the syntax of the custom js files
 gulp.task('style', function(){
   
   return gulp.src(jsFiles)
@@ -153,6 +166,7 @@ gulp.task('style', function(){
     .pipe(jshint.reporter(stylish));
 });
 
+// run style, index and app.js. rs with nodemon with rs 
 gulp.task('serve', gulp.series('style','index', function() {
   
   var options={
