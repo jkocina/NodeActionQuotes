@@ -43,7 +43,13 @@ gulp.task('vendor', function(cb) {
       '!./node_modules/jquery/dist/core.js'
     ])
     .pipe(gulp.dest('./public/vendor/jquery'))
-
+  
+  // ionic icons
+    gulp.src([
+      './node_modules/ionicons/dist/css/*'
+    ])
+    .pipe(gulp.dest('./public/vendor/ionicons'))
+    
   cb();
 
 });
@@ -106,7 +112,7 @@ gulp.task("dev", gulp.parallel(watchFiles, browserSync));
 
 gulp.task('index' , function(){
 //This is whats being injected into 
-  var target = gulp.src('./src/views/index.html');
+  var target = gulp.src('./src/views/index.ejs');
   
 //These are the sources to inject from. For this command, root is the directory the gulp file is in.
   var sources = gulp.src(['./public/vendor/**/*.js', './public/**/*.css']);

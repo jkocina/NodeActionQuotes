@@ -1,0 +1,146 @@
+//Google Fonts
+@import 'https://fonts.googleapis.com/css?family=Space+Mono';
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+  color: #ccc;
+}
+
+.header {
+  height: 500px;
+  background-color: #282C34;
+  background-image: url(http://www.transparenttextures.com/patterns/shattered.png);
+}
+
+.title {
+  margin-top: 0;
+  padding: 120px 0 40px;
+  text-align: center;
+  font-size: 110px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-weight: 300;
+}
+
+.btn-cta {
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 10px;
+  background: #ccc;
+  color: #555;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: shade(#ccc, 30%);
+    color: #555;
+  }
+}
+
+// Overlay
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.59, -0.17, 0.3, 1.67);
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    .modal {
+      transform: translate(0px, 0px);
+    }
+  }
+}
+
+.modal {
+  transform: translate(0px, -50px);
+  transition: all 0.7s cubic-bezier(0.59, -0.17, 0.3, 1.67);
+  position: relative;
+  padding: 30px;
+  width: 400px;
+  background-color: #ddd;
+  color: #231D23;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.4);
+  .lead {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .tagline {
+    margin-bottom: 40px;
+    color: firebrick;
+    font-size: 18px;
+  }
+  .close-btn {
+    position: absolute;
+    padding: 3px 9px;
+    font-size: 24px;
+    text-align: center;
+    background: #ccc;
+    color: #9c9c9c;
+    top: -1px;
+    right: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+form {
+  position: relative;
+  z-index: 2;
+  background: #231D23;
+  padding: 20px;
+  margin: 60px -30px -30px;
+  display: flex;
+  input {
+    height: 60px;
+    border: none;
+    display: inline-block;
+    padding: 0 30px;
+    font-size: 18px;
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 0px 2px cornflowerblue inset;
+    }
+  }
+  input[type=text] {
+    flex: 1;
+  }
+  input[type=submit] {
+    background: #ccc;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 720px) {
+  .modal {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 580px) {
+  form {
+    flex-direction: column;
+    input[type="submit"] {
+      margin: 0;
+    }
+    input[type="text"] {
+      margin-bottom: 5px;
+    }
+  }
+}

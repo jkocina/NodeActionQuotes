@@ -1,0 +1,100 @@
+[  {
+      "movie": "Gladiator",
+      "show": "",
+      "director": "",
+      "movieStar": "Russell Crowne",
+      "src": "gladiator.jpg",
+      "quote": "At my signal, unleash hell.",
+      "releaseMonth": "",
+      "releaseDay": "",
+      "releaseYear": ""
+    },
+    {
+      "movie": "",
+      "show": "Jessica Jones",
+      "director": "",
+      "movieStar": "Krysten Ritter",
+      "src": "jessica-jones-season-2-slice-600x200.jpg",
+      "quote": "Knowing it’s real means you gotta make a decision. One, keep denying it, or two, do something about it.",
+      "releaseMonth": "",
+      "releaseDay": "",
+      "releaseYear": ""
+    },
+    {
+      "movie": "Terminator",
+      "show": "",
+      "director": "",
+      "movieStar": "Linda Hamilton",
+      "src": "Terminator-Sarah-Connor-Linda-Hamilton-600x302.jpg",
+      "quote": "The unknown future rolls toward us. I face it, for the first time, with a sense of hope.",
+      "releaseMonth": "",
+      "releaseDay": "",
+      "releaseYear": ""
+    },
+    {
+      "movie": "Terminator",
+      "show": "",
+      "director": "",
+      "movieStar": "Arnold Schwarzenegger",
+      "src": "terminator.jpg",
+      "quote": "Come with me if you want to live.",
+      "releaseMonth": "",
+      "releaseDay": "",
+      "releaseYear": ""
+    },
+    {
+      "movie": "G.I. Jane",
+      "show": "",
+      "director": "",
+      "movieStar": "Demi Moore",
+      "src": "GIJane.png",
+      "quote": "Just treat me the same. No better, no worse.",
+      "releaseMonth": "",
+      "releaseDay": "",
+      "releaseYear": ""
+    },
+    {
+      "movie": "Top Gun",
+      "show": "",
+      "director": "",
+      "movieStar": "Tom Cruise",
+      "src": "cockpit.png",
+      "quote": "I feel the need – the need for speed.",
+      "releaseMonth": "",
+      "releaseDay": "",
+      "releaseYear": ""
+    },
+    {
+      "movie": "Dirty Harry",
+      "show": "",
+      "director": "",
+      "movieStar": "Clint Eastwood",
+      "src": "dirtyHarry.jpg",
+      "quote": "You've got to ask yourself one question: 'Do I feel lucky?'",
+      "releaseMonth": "",
+      "releaseDay": "",
+      "releaseYear": ""
+    },
+    {
+      "movie": "Terminator",
+      "show": "",
+      "director": "",
+      "movieStar": "Arnold Schwarzenegger",
+      "src": "terminatorHasta.jpg",
+      "quote": "Hasta la vista, baby.",
+      "releaseMonth": "",
+      "releaseDay": "",
+      "releaseYear": ""
+    },
+    {
+      "movie": "Sudden Impact",
+      "show": "",
+      "director": "",
+      "movieStar": "Clint Eastwood",
+      "src": "clint-eastwood-sudden.jpg",
+      "quote": "Go ahead, make my day.",
+      "releaseMonth": "",
+      "releaseDay": "",
+      "releaseYear": ""
+    }
+]

@@ -23,10 +23,13 @@
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/one-page-wonder.css">
     <link rel="stylesheet" href="/css/one-page-wonder.min.css">
+    <link rel="stylesheet" href="/vendor/ionicons/ionicons-core.css">
+    <link rel="stylesheet" href="/vendor/ionicons/ionicons-core.min.css">
+    <link rel="stylesheet" href="/vendor/ionicons/ionicons.css">
+    <link rel="stylesheet" href="/vendor/ionicons/ionicons.min.css">
     <!-- endinject -->
     
     <!-- inject:custom:js -->
-    <script src="/js/index/test.js"></script>
     <!-- endinject -->
   </head>
 
@@ -73,108 +76,28 @@
       <%} %>
       
     </header>
-
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-              <img class="img-fluid rounded-circle" src="img/cockpit.png" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-              <h2 class="display-4">"I feel the need – the need for speed." </h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     
+    <% for (var i = 0; i < quotes.length; i++) {%>
     <section>
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 order-lg-2">
             <div class="p-5">
-              <img class="img-fluid rounded-circle" src="img/terminatorHasta.jpg" alt="">
+              <img class="img-fluid rounded-circle" src="img/<%= quotes[i].src %>" alt="">
             </div>
           </div>
           <div class="col-lg-6 order-lg-1">
             <div class="p-5">
-              <h2 class="display-4">"Hasta la vista, baby."</h2>
+              <blockquote class="blockquote">
+                <p class="mb-0">"<%= quotes[i].quote %>"</p>
+                  <footer class="blockquote-footer"><%= quotes[i].movieStar %> in <cite title="Source Title"><%= movieOrShow(quotes[i].movie, quotes[i].show) %></cite></footer>
+              </blockquote>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="p-5">
-              <img class="img-fluid rounded-circle" src="img/gladiator.jpg" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="p-5">
-              <h2 class="display-4">"At my signal, unleash hell."</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-              <img class="img-fluid rounded-circle" src="img/dirtyHarry.jpg" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-              <h2 class="display-4">"You've got to ask yourself one question: 'Do I feel lucky?'"</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-              <img class="img-fluid rounded-circle" src="img/clint-eastwood-sudden.jpg" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-              <h2 class="display-4">"Go ahead, make my day."</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section>
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="p-5">
-              <img class="img-fluid rounded-circle" src="img/terminator.jpg" alt="">
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="p-5">
-              <h2 class="display-4">"Come with me if you want to live."</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <% } %>
 
     <!-- Footer -->
     <footer class="py-5 bg-black">
