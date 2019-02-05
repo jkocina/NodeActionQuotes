@@ -1,5 +1,5 @@
 
-> If your looking for action and hate redundency, look no further. This app has all the action quotes you need. your looking for and a the finished product can be found [Action Quotes] (https://node-events-koce2koce.c9users.io/)
+> If your looking for action and hate redundency, look no further. This app has all the action quotes you need. your looking for and a the finished product can be found [Action Quotes](https://node-events-koce2koce.c9users.io/)
 
 ## __Node JS__ _presents_
 
@@ -10,7 +10,7 @@
 ## _a_ Madison, Wisconsin _creation_
 
 
-## __Action Quotes__
+# __Action Quotes__
 
 
 #### _featuring:_
