@@ -1,17 +1,19 @@
 
 > If your looking for action and hate redundency, look no further. This app has all the action quotes you need. your looking for and a the finished product can be found [Action Quotes] (https://node-events-koce2koce.c9users.io/)
 
-## __Node JS__ _presents_
+# __Node JS__ _presents_
 
 
-## _a_ __Jacob Kocina__ _production_
+# _a_ Jacob Kocina _production_
 
 
-## _a_ __Madison, Wisconsin__ _creation_
+# _a_ Madison, Wisconsin _creation_
+
 
 # __Action Quotes__
 
-### _featuring_
+
+### _featuring:_
 
 # _Express_
 
