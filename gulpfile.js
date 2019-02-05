@@ -166,7 +166,7 @@ gulp.task('style', function(){
     .pipe(jshint.reporter(stylish));
 });
 
-// run style, index and app.js. rs with nodemon with rs 
+// run style, index and app.js. Allows cmd line restart with rsG
 gulp.task('serve', gulp.series('style','index', function() {
   
   var options={

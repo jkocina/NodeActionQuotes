@@ -35,14 +35,13 @@ eventRouter.route('/add') //Routing to the add a quote page
 app.get('/', function(req, res){
     
     res.render('index', {
-        nav: [{ link : "http://systemslife.net/" , text : "Systems Life"}],
-        quotes : qouteJson ,
-        movieOrShow : movieOrShow
-              /* Future features
+        nav: [{ link : "http://systemslife.net/" , text : "Systems Life"}/* 
               { link : "home", text : "Home" },
               { link : "sign-Up", text : "Sign-Up"},
               { link : "log-In", text : "Log-in"},
-              { link : "events", text : "Events"}]*/
+              { link : "events", text : "Events"}]*/],
+        quotes : qouteJson ,
+        movieOrShow : movieOrShow,
     })
 })
 
