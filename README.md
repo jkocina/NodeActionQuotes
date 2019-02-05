@@ -21,7 +21,7 @@
 
 ##### _Gulp_
 
-##### _ELS templating_
+##### _EJS templating_
 
 ##### and
 

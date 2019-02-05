@@ -20,17 +20,6 @@ app.listen(port, function(err){
 //Setting up routing 
 app.use('/quotes', eventRouter)
 
-eventRouter.route('/') //Routing to the root of the quote page
-    .get(function(req, res){
-        
-        res.send('Hello quotes')
-    })
-
-eventRouter.route('/add') //Routing to the add a quote page    
-    .get(function(req, res){
-        res.send('Hello add a quote')
-    })
-
 //Resonding to root request using EJS templating
 app.get('/', function(req, res){
     
@@ -44,32 +33,3 @@ app.get('/', function(req, res){
         movieOrShow : movieOrShow,
     })
 })
-
-//Resonding to quote request using EJS templating
-app.get('/quotes', function(req, res){
-    
-    res.render('quotes', {
-        list: ['first val','second val','third val'],
-        nav: [{ link : "http://systemslife.net/" , text : "Systems Life"}]
-              /* Future features
-              { link : "home", text : "Home" },
-              { link : "sign-Up", text : "Sign-Up"},
-              { link : "log-In", text : "Log-in"},
-              { link : "events", text : "Events"}]*/
-    })
-})
-
-//This helper function will test whether show or movie is populated and will pass to index.ejs
-function movieOrShow(movie, show)  {
-
-    if (show != "" )  {
-        
-        return show
-    } else if (movie != "" ) {
-        
-        return movie
-    } else {
-        
-        return "No movie listed"
-    }
-}
