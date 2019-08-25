@@ -83,7 +83,12 @@
             <div class="p-5">
               <blockquote class="blockquote">
                 <p class="mb-0">"<%= quotes[i].quote %>"</p>
-                  <footer class="blockquote-footer"><%= quotes[i].movieStar %> in <cite title="Source Title"><%= movieOrShow(quotes[i].movie, quotes[i].show) %></cite></footer>
+                  <footer class="blockquote-footer">
+                    <%= quotes[i].movieStar %> in 
+                    <cite title="Source Title">
+                      <%= movieOrShow(quotes[i].movie, quotes[i].show) %>
+                    </cite>
+                  </footer>
               </blockquote>
             </div>
           </div>
