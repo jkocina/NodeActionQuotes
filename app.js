@@ -2,7 +2,7 @@ var express = require('express') //referencing express
 var app = express() //referencing the express framework
 var eventRouter = express.Router() //Instantiating the event router
 var fs = require('fs') //for parsing json files
-var port = process.env.PORT //this is a cloud 9 environment variable to find the port hosted on
+var port = process.env.PORT || 3000 //this is a cloud 9 environment variable to find the port hosted on
 var qouteJson = require("./src/data/quotes.json") //Quote data file
 
 var quoteRouter = require('./src/routes/quoteRouter.js')
