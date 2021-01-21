@@ -23,7 +23,7 @@
     "jquery": "^3.5.1",
     "jquery-modal": "^0.9.1",
     "popper.js": "1.14.6",
-    "socket.io": "2.2.0",
+    "socket.io": "2.4.0",
     "yarn": "^1.17.3"
   },
   "devDependencies": {
